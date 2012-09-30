@@ -1,0 +1,11 @@
+Package: gretlReadWrite
+Type: Package
+Title: some functions to read and write gretl gdt file
+Version: 0.001
+Date: 2012-01-02
+Depends : R (>= 2.10.0), XML
+Author: Dicko Ahmadou
+Maintainer: Dicko Ahmadou <dicko.ahmadou@gmail.com>
+Description: Help R users to play nice with gretl
+License: GPL
+LazyLoad: yes
