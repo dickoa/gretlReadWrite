@@ -1,7 +1,7 @@
 ##' .. content for \description{} (no empty lines) ..
 ##'
 ##' .. content for \details{} ..
-##' @title
+##'
 ##' @param file
 ##' @return a list of list which contains all relevant metadata
 ##' @author ahmadou

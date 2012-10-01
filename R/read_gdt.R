@@ -1,11 +1,15 @@
-##' .. content for \description{} (no empty lines) ..
+##' Read gretl gdt file
 ##'
-##' .. content for \details{} ..
-##' @title
+##' This function read gretl gdt file by using the XML package to parse the file
+##'
 ##' @param file
 ##' @param panelindexes
 ##' @param forceDF
 ##' @return a data.frame if reading a cross-section data, a mts if reading time series object and plm object when reading  panel data
+##' @examples
+##' f <- file.path(system.file(package = "gretlReadWrite"), "data", "classical.gdt")
+##' Data <- read.gdt(f)
+##' str(Data)
 ##' @author ahmadou
 read.gdt <-
     function(file, panelindexes = NULL, forceDF = FALSE) {

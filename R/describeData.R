@@ -1,7 +1,7 @@
-##' .. content for \description{} (no empty lines) ..
+##' Describe metadata
 ##'
 ##' .. content for \details{} ..
-##' @title
+##'
 ##' @param data
 ##' @param file
 ##' @return None, give metadata about data or file

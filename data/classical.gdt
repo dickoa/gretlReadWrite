@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gretldata SYSTEM "gretldata.dtd">
+
+<gretldata name="classical" frequency="1" startobs="1" endobs="50" type="cross-section">
+<description>
+These are artificial data generated from the classical normal linear model
+
+  y_t = \beta_1 + \beta_2 X_{t2} + \beta_3 X_{t3} + u_t,
+
+where u_t is NID(0,\sigma^2). In the DGP, \beta_1 = 5.0, \beta_2 = 1.0,
+\beta_3=0.3, and \sigma^2=1.0 .
+
+These data are for use with the exercises in the book
+
+  Russell Davidson and James G. MacKinnon, Econometric Theory and Methods,
+  New York, Oxford University Press, 2004.
+</description>
+<variables count="3">
+<variable name="y"
+/>
+<variable name="x2"
+/>
+<variable name="x3"
+/>
+</variables>
+<observations count="50" labels="false">
+<obs>2.74893 0.01213 0.03647 </obs>
+<obs>8.22844 1.68510 3.73744 </obs>
+<obs>6.70342 0.40422 2.30981 </obs>
+<obs>7.28148 0.60591 1.61516 </obs>
+<obs>7.64244 2.11059 6.94791 </obs>
+<obs>6.14290 0.15078 4.35728 </obs>
+<obs>7.44234 1.70251 1.73822 </obs>
+<obs>7.67685 0.84598 0.96763 </obs>
+<obs>5.60109 0.52180 0.83943 </obs>
+<obs>4.58378 0.10510 0.18699 </obs>
+<obs>5.98356 1.07000 1.07345 </obs>
+<obs>7.37600 0.85357 1.79087 </obs>
+<obs>6.49761 1.73861 4.27514 </obs>
+<obs>7.32603 0.80263 0.95498 </obs>
+<obs>6.19413 0.77845 1.69180 </obs>
+<obs>5.68116 0.00156 0.28334 </obs>
+<obs>8.44560 0.15554 6.33121 </obs>
+<obs>5.05822 0.02017 1.72572 </obs>
+<obs>4.97603 0.04535 0.12654 </obs>
+<obs>5.07027 0.28467 1.51710 </obs>
+<obs>5.26627 0.88197 1.43978 </obs>
+<obs>5.74619 0.12367 1.52777 </obs>
+<obs>9.20755 2.88063 3.08757 </obs>
+<obs>7.81682 1.65474 1.69118 </obs>
+<obs>6.07161 0.41420 0.72326 </obs>
+<obs>7.29081 1.82482 2.04392 </obs>
+<obs>5.49108 0.22758 0.26306 </obs>
+<obs>10.47608 3.48629 3.67067 </obs>
+<obs>5.77613 0.97715 3.85444 </obs>
+<obs>5.95776 0.36030 0.58729 </obs>
+<obs>11.27875 4.59334 4.98387 </obs>
+<obs>5.60760 0.00113 0.53504 </obs>
+<obs>4.34638 0.12949 0.24624 </obs>
+<obs>5.71887 0.53014 0.66436 </obs>
+<obs>5.83325 0.36426 0.82445 </obs>
+<obs>6.53316 0.01468 1.38503 </obs>
+<obs>7.46906 0.21685 0.54873 </obs>
+<obs>7.51322 2.13775 2.17558 </obs>
+<obs>11.70501 4.16273 4.44564 </obs>
+<obs>6.04572 0.26734 1.67343 </obs>
+<obs>10.23559 3.45565 3.47780 </obs>
+<obs>6.17433 0.10457 1.67226 </obs>
+<obs>6.40929 0.19427 0.25128 </obs>
+<obs>6.32713 0.49613 3.82877 </obs>
+<obs>4.58984 1.05840 1.19939 </obs>
+<obs>4.51902 0.04615 0.19709 </obs>
+<obs>4.85745 0.10054 0.11683 </obs>
+<obs>5.60903 0.06965 3.68544 </obs>
+<obs>5.52962 0.04801 0.06138 </obs>
+<obs>5.40368 0.87502 1.11276 </obs>
+</observations>
+</gretldata>

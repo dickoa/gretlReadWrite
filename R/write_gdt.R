@@ -1,11 +1,11 @@
 ##' .. content for \description{} (no empty lines) ..
 ##'
 ##' .. content for \details{} ..
-##' @title
+##'
 ##' @param data
 ##' @param filename
 ##' @param ...
-##' @return
+##' @return a gdt file
 ##' @author ahmadou
 write.gdt <- function(data, filename, ...) UseMethod("write.gdt")
 
@@ -14,7 +14,7 @@ write.gdt <- function(data, filename, ...) UseMethod("write.gdt")
 ##' .. content for \description{} (no empty lines) ..
 ##'
 ##' .. content for \details{} ..
-##' @title
+##'
 ##' @param data
 ##' @param filename
 ##' @param dataname
@@ -26,7 +26,7 @@ write.gdt <- function(data, filename, ...) UseMethod("write.gdt")
 ##' @param endobs
 ##' @param frequency
 ##' @param typeofdata
-##' @return
+##' @return a gdt file
 ##' @author ahmadou
 write.gdt.matrix <- function(data, filename, dataname = "Rdata", description = "", varlabel = NULL, obslabels = "false", encoding = "UTF-8", startobs = 1, endobs = nrow(data), frequency = 1, typeofdata = "cross-section") {
       out <- xmlTree("gretldata", attrs = c(name = dataname, frequency = frequency, startobs = startobs, endobs = endobs, type = typeofdata), dtd = 'gretldata SYSTEM "gretldata.dtd"')
@@ -51,11 +51,11 @@ write.gdt.matrix <- function(data, filename, dataname = "Rdata", description = "
 ##' .. content for \description{} (no empty lines) ..
 ##'
 ##' .. content for \details{} ..
-##' @title
+##'
 ##' @param data
 ##' @param filename
 ##' @param ...
-##' @return
+##' @return a gdt file
 ##' @author ahmadou
 write.gdt.ts <- function(data, filename, ...) {
     startobs <- paste(sprintf("%02d", start(data)), collapse = ":")
@@ -74,11 +74,11 @@ write.gdt.data.frame <- function(data, filename, ...) {
 ##' .. content for \description{} (no empty lines) ..
 ##'
 ##' .. content for \details{} ..
-##' @title
+##'
 ##' @param data
 ##' @param filename
 ##' @param encoding
-##' @return
+##' @return a gdt file
 ##' @author ahmadou
 write.gdt.gretldata <- function(data, filename, encoding = "UTF-8") {
         ## export data into xml
