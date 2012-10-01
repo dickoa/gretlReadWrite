@@ -3,16 +3,14 @@
 ##' .. content for \details{} ..
 ##' @title
 ##' @param file
-##' @param keep.label
-##' @param keep.description
+##' @param panelindexes
 ##' @param forceDF
-##' @return
+##' @return a data.frame if reading a cross-section data, a mts if reading time series object and plm object when reading  panel data
 ##' @author ahmadou
 read.gdt <-
     function(file, panelindexes = NULL, forceDF = FALSE) {
 
         doc <- xmlRoot(xmlInternalTreeParse(file))
-
         ## metadata
         metadata <- getNodeSet(doc, "//gretldata")
         typeofdata <- sapply(metadata, xmlGetAttr, "type")
@@ -30,20 +28,20 @@ read.gdt <-
         value <- do.call("rbind", value)
         value <- as.data.frame(value)
         names(value) <- variablename
-        class(value) <- c("gretldata.frame", "data.frame")
+        class(value) <- c("gretldata.frame", "gretldata", "data.frame")
 
         if (typeofdata == "time-series") {
             startobs <- as.numeric(unlist(strsplit(startobs, ":")[[1]]))
             endobs <- as.numeric(unlist(strsplit(endobs, ":")[[1]]))
             frequency <- as.numeric(sapply(metadata, xmlGetAttr, "frequency"))
             value <- ts(value, start = startobs, end = endobs, frequency = frequency)
-            class(value) <- c("mts", "gretlts", "ts")
+            class(value) <- c("mts", "gretlts", "gretldata",  "ts")
         }
 
         if (typeofdata == "stacked-time-series" & !is.null(panelindexes) ) {
            require(plm, quietly = TRUE)
            value <- plm.data(value, indexes = panelindexes)
-           class(value) <- c("gretlplm", "plm.dim", "data.frame")
+           class(value) <- c("gretlplm", "gretldata", "plm.dim",  "data.frame")
 
         }
 

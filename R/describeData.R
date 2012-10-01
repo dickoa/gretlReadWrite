@@ -3,10 +3,11 @@
 ##' .. content for \details{} ..
 ##' @title
 ##' @param data
-##' @return
+##' @param file
+##' @return None, give metadata about data or file
 ##' @author ahmadou
 describeData <-
-    function(data = NULL, file = NULL) {
+    function(data = NULL, file = NULL, to.character = FALSE) {
         if (is.null(file) & !is.null(data)) {
             if (! any(grepl("gretl", class(data))) ) stop("Your data is not of class 'gretldata' !!!")
 
@@ -23,6 +24,11 @@ describeData <-
 
 ### metadata description
         description <- xpathSApply(doc, "/gretldata//description", xmlValue)
-        cat(description, "\n")
+        if (to.character) {
+            description
+        } else {
+            cat(description, "\n")
+        }
+
     }
 
