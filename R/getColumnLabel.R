@@ -1,10 +1,9 @@
-##' .. content for \description{} (no empty lines) ..
-##'
+##' Get label for variable name
 ##'
 ##' @export getColumnLabel
 ##' @param data
 ##' @param file
-##' @param colnames
+##' @param colnamesma
 ##' @param to.data.frame
 ##' @return a data.frame or a simple message displaying label and var (no object)
 ##' @author Ahmadou Dicko <dicko.ahmadou at gmail.com>

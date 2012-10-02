@@ -1,6 +1,6 @@
 \name{getColumnLabel}
 \alias{getColumnLabel}
-\title{.. content for \description{} (no empty lines) ..}
+\title{Get label for variable name}
 \usage{
   getColumnLabel(data = NULL, file = NULL, colnames = NULL,
     to.data.frame = FALSE)
@@ -19,7 +19,7 @@
   (no object)
 }
 \description{
-  .. content for \description{} (no empty lines) ..
+  Get label for variable name
 }
 \author{
   Ahmadou Dicko <dicko.ahmadou at gmail.com>
