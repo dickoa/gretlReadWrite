@@ -10,7 +10,7 @@
 
   \item{file}{}
 
-  \item{colnames}{}
+  \item{colnamesma}{}
 
   \item{to.data.frame}{}
 }

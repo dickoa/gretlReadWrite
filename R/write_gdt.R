@@ -1,6 +1,6 @@
 ##' Export R object data to gretl gdt
 ##'
-##' @export  write.gdt write.gdt.matrix write.gdt.data.frame write.gdt.gretldat
+##' @export  write.gdt write.gdt.matrix write.gdt.data.frame write.gdt.gretldata
 ##' @aliases write.gdt write.gdt.matrix write.gdt.data.frame write.gdt.gretldata
 ##' @param data
 ##' @param filename
@@ -13,8 +13,8 @@ write.gdt <- function(data, filename, ...) UseMethod("write.gdt")
 
 ##' Export R object data to gretl gdt
 ##'
-##' @export  write.gdt write.gdt.matrix write.gdt.data.frame write.gdt.gretldat
-##' @aliases write.gdt write.gdt.matrix write.gdt.data.frame write.gdt.gretldat
+##' @export  write.gdt write.gdt.matrix write.gdt.data.frame write.gdt.gretldata
+##' @aliases write.gdt write.gdt.matrix write.gdt.data.frame write.gdt.gretldata
 ##' @param data
 ##' @param filename
 ##' @param dataname
@@ -50,8 +50,8 @@ write.gdt.matrix <- function(data, filename, dataname = "Rdata", description = "
 
 ##' Export R object data to gretl gdt
 ##'
-##' @export  write.gdt write.gdt.matrix write.gdt.data.frame write.gdt.gretldat
-##' @aliases write.gdt write.gdt.matrix write.gdt.data.frame write.gdt.gretldat
+##' @export  write.gdt write.gdt.matrix write.gdt.data.frame write.gdt.gretldata
+##' @aliases write.gdt write.gdt.matrix write.gdt.data.frame write.gdt.gretldata
 ##' @param data
 ##' @param filename
 ##' @param ...
@@ -68,8 +68,8 @@ write.gdt.ts <- function(data, filename, ...) {
 
 ##' Export R object data to gretl gdt
 ##'
-##' @export  write.gdt write.gdt.matrix write.gdt.data.frame write.gdt.gretldat
-##' @aliases write.gdt write.gdt.matrix write.gdt.data.frame write.gdt.gretldat
+##' @export  write.gdt write.gdt.matrix write.gdt.data.frame write.gdt.gretldata
+##' @aliases write.gdt write.gdt.matrix write.gdt.data.frame write.gdt.gretldata
 ##' @param data
 ##' @param filename
 ##' @param ...
@@ -83,8 +83,8 @@ write.gdt.data.frame <- function(data, filename, ...) {
 
 ##' Export R object data to gretl gdt
 ##'
-##' @export  write.gdt write.gdt.matrix write.gdt.data.frame write.gdt.gretldat
-##' @aliases write.gdt write.gdt.matrix write.gdt.data.frame write.gdt.gretldat
+##' @export  write.gdt write.gdt.matrix write.gdt.data.frame write.gdt.gretldata
+##' @aliases write.gdt write.gdt.matrix write.gdt.data.frame write.gdt.gretldata
 ##' @param data
 ##' @param filename
 ##' @param encoding
