@@ -1,11 +1,11 @@
 ##' Describe metadata
 ##'
-##' .. content for \details{} ..
 ##'
+##' @export describeData
 ##' @param data
 ##' @param file
-##' @return None, give metadata about data or file
-##' @author ahmadou
+##' @return return metadata about gretldata object
+##' @author Ahmadou Dicko <dicko.ahmadou at gmail.com>
 describeData <-
     function(data = NULL, file = NULL, to.character = FALSE) {
         if (is.null(file) & !is.null(data)) {

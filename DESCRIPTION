@@ -9,3 +9,10 @@ Maintainer: Dicko Ahmadou <dicko.ahmadou@gmail.com>
 Description: Help R users to play nice with gretl
 License: GPL
 LazyLoad: yes
+Collate:
+    'describeData.R'
+    'getAllMetaData.R'
+    'getColumnLabel.R'
+    'help.R'
+    'read_gdt.R'
+    'write_gdt.R'

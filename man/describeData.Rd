@@ -11,12 +11,12 @@
   \item{file}{}
 }
 \value{
-  None, give metadata about data or file
+  return metadata about gretldata object
 }
 \description{
-  .. content for \details{} ..
+  Describe metadata
 }
 \author{
-  ahmadou
+  Ahmadou Dicko <dicko.ahmadou at gmail.com>
 }
 

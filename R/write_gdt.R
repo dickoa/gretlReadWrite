@@ -1,20 +1,20 @@
-##' .. content for \description{} (no empty lines) ..
+##' Export R object data to gretl gdt
 ##'
-##' .. content for \details{} ..
-##'
+##' @export  write.gdt write.gdt.matrix write.gdt.data.frame write.gdt.gretldat
+##' @aliases write.gdt write.gdt.matrix write.gdt.data.frame write.gdt.gretldata
 ##' @param data
 ##' @param filename
 ##' @param ...
 ##' @return a gdt file
-##' @author ahmadou
+##' @author Ahmadou Dicko <dicko.ahmadou at gmail.com>
 write.gdt <- function(data, filename, ...) UseMethod("write.gdt")
 
 
 
-##' .. content for \description{} (no empty lines) ..
+##' Export R object data to gretl gdt
 ##'
-##' .. content for \details{} ..
-##'
+##' @export  write.gdt write.gdt.matrix write.gdt.data.frame write.gdt.gretldat
+##' @aliases write.gdt write.gdt.matrix write.gdt.data.frame write.gdt.gretldat
 ##' @param data
 ##' @param filename
 ##' @param dataname
@@ -27,7 +27,7 @@ write.gdt <- function(data, filename, ...) UseMethod("write.gdt")
 ##' @param frequency
 ##' @param typeofdata
 ##' @return a gdt file
-##' @author ahmadou
+##' @author Ahmadou Dicko <dicko.ahmadou at gmail.com>
 write.gdt.matrix <- function(data, filename, dataname = "Rdata", description = "", varlabel = NULL, obslabels = "false", encoding = "UTF-8", startobs = 1, endobs = nrow(data), frequency = 1, typeofdata = "cross-section") {
       out <- xmlTree("gretldata", attrs = c(name = dataname, frequency = frequency, startobs = startobs, endobs = endobs, type = typeofdata), dtd = 'gretldata SYSTEM "gretldata.dtd"')
       out$addNode("description", description)
@@ -48,15 +48,15 @@ write.gdt.matrix <- function(data, filename, dataname = "Rdata", description = "
 
 }
 
-##' .. content for \description{} (no empty lines) ..
+##' Export R object data to gretl gdt
 ##'
-##' .. content for \details{} ..
-##'
+##' @export  write.gdt write.gdt.matrix write.gdt.data.frame write.gdt.gretldat
+##' @aliases write.gdt write.gdt.matrix write.gdt.data.frame write.gdt.gretldat
 ##' @param data
 ##' @param filename
 ##' @param ...
 ##' @return a gdt file
-##' @author ahmadou
+##' @author Ahmadou Dicko <dicko.ahmadou at gmail.com>
 write.gdt.ts <- function(data, filename, ...) {
     startobs <- paste(sprintf("%02d", start(data)), collapse = ":")
     endobs <- paste(sprintf("%02d", end(data)), collapse = ":")
@@ -66,20 +66,30 @@ write.gdt.ts <- function(data, filename, ...) {
 }
 
 
+##' Export R object data to gretl gdt
+##'
+##' @export  write.gdt write.gdt.matrix write.gdt.data.frame write.gdt.gretldat
+##' @aliases write.gdt write.gdt.matrix write.gdt.data.frame write.gdt.gretldat
+##' @param data
+##' @param filename
+##' @param ...
+##' @return a gdt file
+##' @author Ahmadou Dicko <dicko.ahmadou at gmail.com>
 write.gdt.data.frame <- function(data, filename, ...) {
     data <- as.matrix(data)
     write.gdt.matrix(data, filename, ...)
 }
 
-##' .. content for \description{} (no empty lines) ..
+
+##' Export R object data to gretl gdt
 ##'
-##' .. content for \details{} ..
-##'
+##' @export  write.gdt write.gdt.matrix write.gdt.data.frame write.gdt.gretldat
+##' @aliases write.gdt write.gdt.matrix write.gdt.data.frame write.gdt.gretldat
 ##' @param data
 ##' @param filename
 ##' @param encoding
 ##' @return a gdt file
-##' @author ahmadou
+##' @author Ahmadou Dicko <dicko.ahmadou at gmail.com>
 write.gdt.gretldata <- function(data, filename, encoding = "UTF-8") {
         ## export data into xml
       meta <- getAllMetaData(attr(data, "filename"))

@@ -1,18 +1,19 @@
 ##' Read gretl gdt file
 ##'
-##' This function read gretl gdt file by using the XML package to parse the file
 ##'
+##' This function read gretl gdt file by using the XML package to parse the file
+##' @export read.gdt
 ##' @param file
 ##' @param panelindexes
-##' @param forceDF
+##' @param to.data.frame
 ##' @return a data.frame if reading a cross-section data, a mts if reading time series object and plm object when reading  panel data
 ##' @examples
-##' f <- file.path(system.file(package = "gretlReadWrite"), "data", "classical.gdt")
+##' f <- system.file(package = "gretlReadWrite", "data", "classical.gdt")
 ##' Data <- read.gdt(f)
 ##' str(Data)
-##' @author ahmadou
+##' @author Ahmadou Dicko <dicko.ahmadou at gmail.com>
 read.gdt <-
-    function(file, panelindexes = NULL, forceDF = FALSE) {
+    function(file, panelindexes = NULL, to.data.frame = FALSE) {
 
         doc <- xmlRoot(xmlInternalTreeParse(file))
         ## metadata
@@ -49,7 +50,7 @@ read.gdt <-
 
         }
 
-        if (forceDF | typeofdata == "cross-section") {
+        if (to.data.frame | typeofdata == "cross-section") {
             attr(value, "filename") <- file
             return(value)
         }

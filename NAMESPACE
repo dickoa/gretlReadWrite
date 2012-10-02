@@ -1,4 +1,8 @@
+export(describeData)
+export(getColumnLabel)
+export(read.gdt)
+export(write.gdt)
+export(write.gdt.data.frame)
+export(write.gdt.gretldat)
+export(write.gdt.matrix)
 import(XML)
-
-exportPattern("^[[:alpha:]]+")
-

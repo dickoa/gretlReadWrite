@@ -1,10 +1,10 @@
-##' .. content for \description{} (no empty lines) ..
 ##'
-##' .. content for \details{} ..
+##'
+##'
 ##'
 ##' @param file
 ##' @return a list of list which contains all relevant metadata
-##' @author ahmadou
+##' @author Ahmadou Dicko <dicko.ahmadou at gmail.com>
 getAllMetaData <-
     function(file) {
         doc <- xmlRoot(xmlInternalTreeParse(file))

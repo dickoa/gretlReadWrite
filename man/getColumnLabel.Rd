@@ -19,9 +19,9 @@
   (no object)
 }
 \description{
-  .. content for \details{} ..
+  .. content for \description{} (no empty lines) ..
 }
 \author{
-  ahmadou
+  Ahmadou Dicko <dicko.ahmadou at gmail.com>
 }
 

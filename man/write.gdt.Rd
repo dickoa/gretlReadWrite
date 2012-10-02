@@ -1,6 +1,9 @@
 \name{write.gdt}
 \alias{write.gdt}
-\title{.. content for \description{} (no empty lines) ..}
+\alias{write.gdt.data.frame}
+\alias{write.gdt.gretldata}
+\alias{write.gdt.matrix}
+\title{Export R object data to gretl gdt}
 \usage{
   write.gdt(data, filename, ...)
 }
@@ -15,9 +18,9 @@
   a gdt file
 }
 \description{
-  .. content for \details{} ..
+  Export R object data to gretl gdt
 }
 \author{
-  ahmadou
+  Ahmadou Dicko <dicko.ahmadou at gmail.com>
 }
 

@@ -1,12 +1,11 @@
-\name{write.gdt.ts}
+\name{write.gdt.data.frame}
 \alias{write.gdt}
 \alias{write.gdt.data.frame}
 \alias{write.gdt.gretldat}
 \alias{write.gdt.matrix}
-\alias{write.gdt.ts}
 \title{Export R object data to gretl gdt}
 \usage{
-  write.gdt.ts(data, filename, ...)
+  write.gdt.data.frame(data, filename, ...)
 }
 \arguments{
   \item{data}{}

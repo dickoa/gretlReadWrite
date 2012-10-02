@@ -1,13 +1,13 @@
 ##' .. content for \description{} (no empty lines) ..
 ##'
-##' .. content for \details{} ..
 ##'
+##' @export getColumnLabel
 ##' @param data
 ##' @param file
 ##' @param colnames
 ##' @param to.data.frame
 ##' @return a data.frame or a simple message displaying label and var (no object)
-##' @author ahmadou
+##' @author Ahmadou Dicko <dicko.ahmadou at gmail.com>
 getColumnLabel <-
     function(data = NULL, file = NULL, colnames = NULL, to.data.frame = FALSE) {
         if (is.null(file) & !is.null(data)) {
