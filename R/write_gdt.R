@@ -1,7 +1,7 @@
 ##' Export R object data to gretl gdt
 ##'
-##' @export  write.gdt write.gdt.matrix write.gdt.data.frame write.gdt.gretldata
-##' @aliases write.gdt write.gdt.matrix write.gdt.data.frame write.gdt.gretldata
+##' @export  write.gdt write.gdt.matrix write.gdt.data.frame
+##' @aliases write.gdt write.gdt.matrix write.gdt.data.frame
 ##' @param data
 ##' @param filename
 ##' @param ...
@@ -68,8 +68,8 @@ write.gdt.ts <- function(data, filename, ...) {
 
 ##' Export R object data to gretl gdt
 ##'
-##' @export  write.gdt write.gdt.matrix write.gdt.data.frame write.gdt.gretldata
-##' @aliases write.gdt write.gdt.matrix write.gdt.data.frame write.gdt.gretldata
+##' @export  write.gdt write.gdt.matrix write.gdt.data.frame
+##' @aliases write.gdt write.gdt.matrix write.gdt.data.frame
 ##' @param data
 ##' @param filename
 ##' @param ...
@@ -81,32 +81,32 @@ write.gdt.data.frame <- function(data, filename, ...) {
 }
 
 
-##' Export R object data to gretl gdt
-##'
-##' @export  write.gdt write.gdt.matrix write.gdt.data.frame write.gdt.gretldata
-##' @aliases write.gdt write.gdt.matrix write.gdt.data.frame write.gdt.gretldata
-##' @param data
-##' @param filename
-##' @param encoding
-##' @return a gdt file
-##' @author Ahmadou Dicko <dicko.ahmadou at gmail.com>
-write.gdt.gretldata <- function(data, filename, encoding = "UTF-8") {
-        ## export data into xml
-      meta <- getAllMetaData(attr(data, "filename"))
-      out <- xmlTree("gretldata", attrs = unlist(meta$gretldata), dtd = 'gretldata SYSTEM "gretldata.dtd"')
-      out$addNode("description", xmlTextNode(describeData(data, to.character = TRUE)))
-      out$addNode("variables", attrs = unlist(meta$variablesmeta), close = FALSE)
-      variableAttr <- do.call("cbind", meta$variable)
-      variableAttr <- apply(variableAttr, 1, function(x) out$addNode("variable", attrs = x))
-      out$closeTag()
-      out$addNode("observations", attrs = unlist(meta$observations), close = FALSE)
-      obs <- apply(data, 1, paste, collapse = " ")
-      obs <- lapply(obs, function(x) out$addNode("obs", x))
-      out$closeTag()
-      out$closeTag()
-      saveXML(out$value(), file = filename, encoding = encoding)
+## ##' Export R object data to gretl gdt
+## ##'
+## ##' @export  write.gdt write.gdt.matrix write.gdt.data.frame write.gdt.gretldata
+## ##' @aliases write.gdt write.gdt.matrix write.gdt.data.frame write.gdt.gretldata
+## ##' @param data
+## ##' @param filename
+## ##' @param encoding
+## ##' @return a gdt file
+## ##' @author Ahmadou Dicko <dicko.ahmadou at gmail.com>
+## write.gdt.gretldata <- function(data, filename, encoding = "UTF-8") {
+##         ## export data into xml
+##       meta <- getAllMetaData(attr(data, "filename"))
+##       out <- xmlTree("gretldata", attrs = unlist(meta$gretldata), dtd = 'gretldata SYSTEM "gretldata.dtd"')
+##       out$addNode("description", xmlTextNode(describeData(data, to.character = TRUE)))
+##       out$addNode("variables", attrs = unlist(meta$variablesmeta), close = FALSE)
+##       variableAttr <- do.call("cbind", meta$variable)
+##       variableAttr <- apply(variableAttr, 1, function(x) out$addNode("variable", attrs = x))
+##       out$closeTag()
+##       out$addNode("observations", attrs = unlist(meta$observations), close = FALSE)
+##       obs <- apply(data, 1, paste, collapse = " ")
+##       obs <- lapply(obs, function(x) out$addNode("obs", x))
+##       out$closeTag()
+##       out$closeTag()
+##       saveXML(out$value(), file = filename, encoding = encoding)
 
-    }
+##     }
 
 
 ### to do write panel data
