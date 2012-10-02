@@ -1,6 +1,4 @@
-##'
-##'
-##'
+##' Return some metadata from a gdt file
 ##'
 ##' @param file
 ##' @return a list of list which contains all relevant metadata
