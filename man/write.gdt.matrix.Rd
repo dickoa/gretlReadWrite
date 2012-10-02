@@ -1,7 +1,6 @@
 \name{write.gdt.matrix}
 \alias{write.gdt}
 \alias{write.gdt.data.frame}
-\alias{write.gdt.gretldata}
 \alias{write.gdt.matrix}
 \title{Export R object data to gretl gdt}
 \usage{

@@ -13,8 +13,8 @@ write.gdt <- function(data, filename, ...) UseMethod("write.gdt")
 
 ##' Export R object data to gretl gdt
 ##'
-##' @export  write.gdt write.gdt.matrix write.gdt.data.frame write.gdt.gretldata
-##' @aliases write.gdt write.gdt.matrix write.gdt.data.frame write.gdt.gretldata
+##' @export  write.gdt write.gdt.matrix write.gdt.data.frame
+##' @aliases write.gdt write.gdt.matrix write.gdt.data.frame
 ##' @param data
 ##' @param filename
 ##' @param dataname
@@ -50,8 +50,8 @@ write.gdt.matrix <- function(data, filename, dataname = "Rdata", description = "
 
 ##' Export R object data to gretl gdt
 ##'
-##' @export  write.gdt write.gdt.matrix write.gdt.data.frame write.gdt.gretldata
-##' @aliases write.gdt write.gdt.matrix write.gdt.data.frame write.gdt.gretldata
+##' @export  write.gdt write.gdt.matrix write.gdt.data.frame
+##' @aliases write.gdt write.gdt.matrix write.gdt.data.frame
 ##' @param data
 ##' @param filename
 ##' @param ...
